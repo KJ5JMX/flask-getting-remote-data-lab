@@ -9,7 +9,7 @@ class GetRequester:
     def get_response_body(self):
         response = requests.get(self.url)
         response.raise_for_status()
-        return response.text
+        return response.content
 
     def load_json(self):
         raw_data = self.get_response_body()
